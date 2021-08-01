@@ -32,6 +32,8 @@ public class SnakeAndLadder {
 			System.out.println("Roll the dice in the Board" + rolldice);
 			int player1=dice.calculatePlayerValue(player, rolldice);
 			System.out.println("The position of player is"+player1);
+			boolean win=dice.isWin(player);
+			System.out.println("IS there player win ?" +win);
 			
 		}
         
@@ -62,6 +64,11 @@ public class SnakeAndLadder {
 		    }
 		    System.out.println(player);
 		    return player;
+		}
+		public boolean isWin(int player)
+		{
+			
+		    return winpoint == player;
 		}
         
 
